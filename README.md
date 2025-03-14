@@ -1,6 +1,6 @@
 # ArtBooking.2025
 
-Contains ArtBooking demo application for "Backend applications programming" university course. Build application starts from simple web api projects and advances to layered monolith application with possibiliti to use in microservices architecture.
+Contains ArtBooking demo application for "Backend applications programming" university course. Building application starts from simple web api projects and advances to layered monolith application with possibiliti to use in microservices architecture.
 
 ## LAB #1 - creating dotnet projects
 

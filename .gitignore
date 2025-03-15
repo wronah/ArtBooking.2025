@@ -1,0 +1,95 @@
+# Ignore Visual Studio specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vsp
+*.vspx
+*.vspxproj.user
+*.vcxproj.user
+*.cache
+
+# Ignore build outputs
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.log
+*.mdb
+*.ilk
+*.lib
+*.ncb
+*.sdf
+*.sqlite
+*.suo
+*.tlb
+*.tlh
+*.vcxproj*
+*.code-workspace
+*.sln*
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+.nuget/
+
+# Ignore Rider / JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore Resharper files
+_ReSharper*/
+
+# Ignore Entity Framework migrations
+Migrations/
+
+# Ignore .NET Core / .NET 5+ related files
+project.lock.json
+global.json
+**/bin/
+**/obj/
+appsettings.Development.json
+appsettings.*.json
+
+# Ignore publish output
+wwwroot/dist/
+wwwroot/lib/
+publish/
+out/
+
+# Ignore Node.js specific files
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log
+.pnp/
+.pnp.js
+
+# Ignore Vue.js build output
+**/dist/
+**/build/
+.DS_Store
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Ignore logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore IDE/editor-specific files
+.vscode/
+.history/
+Thumbs.db
+Desktop.ini

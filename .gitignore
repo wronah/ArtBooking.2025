@@ -28,7 +28,6 @@ obj/
 *.tlh
 *.vcxproj*
 *.code-workspace
-*.sln*
 
 # Ignore NuGet packages
 packages/

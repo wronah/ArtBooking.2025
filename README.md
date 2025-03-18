@@ -2,6 +2,8 @@
 
 Contains ArtBooking demo application for "Backend applications programming" university course. Building application starts from simple web api project and advances to layered monolith application with possibility to use in microservices architecture.
 
+> NOTE: Check other branches of this repo!
+
 ## LAB #1 - creating dotnet projects
 
 **prerequisites:**

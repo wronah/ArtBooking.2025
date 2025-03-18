@@ -44,3 +44,28 @@ Debugging With Visual Studio Code:
 4. Pick C# project configuration.
 5. In the next steps choose default options.
 6. In the END: Once confiugred you can start debugging picking configuration from pull down directly in "Run and Debug", and start with "green arrow".
+
+## LAB #2 - building business model and endpoints
+
+**prerequisites:**
+1. Ensure you have Git CLI installed [link](https://git-scm.com/downloads)
+2. Clone `git clone https://github.com/true-vue/ArtBooking.2025.git` or fork this repo.
+3. Switch to `lab#2.a` branch: `git checkout `lab#2.a`.
+
+**Data model design**
+1. Application data model is located within separate project `Business.Model`
+2. Model consists of classes that represent fundamental business objects (like: Organization, User, Event, Ticker, Price and so one...) within [application domain](https://www.sciencedirect.com/topics/computer-science/application-domain).
+3. Those classes are called `Entites` and are located within folder with that exact name [link](https://github.com/true-vue/ArtBooking.2025/tree/lab%232.a/Business.Model/Entities).
+
+**Database interop**
+1. App requires place for storing its data. We will use SQL type database [link](https://www.w3schools.com/sql/default.asp).
+2. To operate between application and actual database `Entity Framework` will be used [link](https://learn.microsoft.com/en-us/ef/).
+3. First ArtBooking specific [DbContext](https://www.learnentityframeworkcore.com/dbcontext) needs to be configured [link](https://github.com/true-vue/ArtBooking.2025/blob/lab%232.a/Business.Model/Data/ArtBookingDbContext.cs).
+4. Then we have to register application `ArtBookingDbContext` for dependecy inject container (Services). For purpose of demonstation will use InMemory database [link](https://github.com/true-vue/ArtBooking.2025/blob/e57c703eb33d69cec16af4cea94601fd10b3e442/Backend/Program.cs#L13C5-L13C94).
+
+**Enpoints - controller methods**
+1. ArtBooking Backend application will expose Web API over [endpoints](https://www.ibm.com/think/topics/api-endpoint)
+2. To build endpoints, Controller pattern is used [link](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio).
+3. Initially single controller for single Entity type will be created, but as application grows controller might not have direct mapping to single Entity [link](https://github.com/true-vue/ArtBooking.2025/blob/lab%232.a/Backend/Controllers/ArtOrganizationController.cs).
+4. `ArtBookingDbContext` configured in eariler steps can be used with [Dependency Injection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection) pattern within Controller [link](https://github.com/true-vue/ArtBooking.2025/blob/e57c703eb33d69cec16af4cea94601fd10b3e442/Backend/Controllers/ArtOrganizationController.cs#L11).
+5. Endpoints are represented by particular Controller methods [CreateOrganization](https://github.com/true-vue/ArtBooking.2025/blob/e57c703eb33d69cec16af4cea94601fd10b3e442/Backend/Controllers/ArtOrganizationController.cs#L17) and [GetOrganization](https://github.com/true-vue/ArtBooking.2025/blob/e57c703eb33d69cec16af4cea94601fd10b3e442/Backend/Controllers/ArtOrganizationController.cs#L38C42-L38C57)

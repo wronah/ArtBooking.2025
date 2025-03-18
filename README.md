@@ -33,3 +33,14 @@ https://learn.microsoft.com/en-us/dotnet/core/tools/
 
 > `dotnet new webapi --controllers`
 > Creates a Web API project with controllers enabled.
+
+**Running the application**
+> dotnet run
+
+Debugging With Visual Studio Code:
+1. In sidebar open the "Run and Debug" panel (Ctrl+Shift+D).
+2. In the "Run and Debug" panel, click blue button "Run and Debug".
+3. Top select menu should popup.
+4. Pick C# project configuration.
+5. In the next steps choose default options.
+6. In the END: Once confiugred you can start debugging picking configuration from pull down directly in "Run and Debug", and start with "green arrow".

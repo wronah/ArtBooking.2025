@@ -2,7 +2,7 @@ namespace Business.Model.Entities;
 
 public class ArtOrganization
 {
-    public int ArtOrganizationId { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public string Email { get; set; }
@@ -10,4 +10,5 @@ public class ArtOrganization
     // Address
 
     public virtual ICollection<User>? Users { get; set; }
+    public virtual ICollection<ArtEvent>? ArtEvents { get; set; }
 }

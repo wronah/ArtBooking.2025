@@ -4,7 +4,7 @@ namespace Business.Model.Entities;
 
 public class User
 {
-    public int UserId { get; set; }
+    public int Id { get; set; }
     public string LoginName { get; set; }
     public string PasswordHash { get; set; }
     public string Email { get; set; }
